@@ -1,0 +1,15 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav class="example-sidenav" (keydown.escape)="close('escape')" disableClose>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of links">
+        <a matLine href="...">{{ link }}</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p>
+      <button mat-button (click)="sidenav.open()">Open</button>
+    </p>
+    <p>Closed due to: {{reason}}</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>

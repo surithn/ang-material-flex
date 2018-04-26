@@ -1,0 +1,13 @@
+li {
+    display: inline;
+    font-size: 14px;
+}
+
+li::after {
+    content: '|';
+    padding: 5px;
+}
+
+li:last-child::after {
+    content: '';
+}
